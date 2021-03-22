@@ -12,3 +12,7 @@ def average(num1, num2):
 
 
 print(average(6, 2))
+
+quarters = ['First', 'Second', 'Third', 'Fourth']
+print(enumerate(quarters))
+print(enumerate(quarters, start=1))
