@@ -71,3 +71,19 @@ class Solution:
 
         for i in range(size//2):
             s[i], s[-i-1] = s[-i-1], s[i]
+
+    def countBalls(self, lowLimit: int, highLimit: int) -> int:
+        
+     
+        A = [0] * 46
+        
+        for i in range(lowLimit, highLimit + 1):
+            cur = 0
+            
+      
+            for x in str(i):
+                cur += int(x)
+                
+            A[cur] += 1
+        
+        return max(A)
