@@ -87,3 +87,15 @@ class Solution:
             A[cur] += 1
         
         return max(A)
+
+class Solution(object):
+    def arrayPairSum(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        nums.sort()
+        curr = 0
+        for i in range(0, len(nums)-1, 2):
+            curr += nums[i]
+        return curr
