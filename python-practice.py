@@ -99,3 +99,6 @@ class Solution(object):
         for i in range(0, len(nums)-1, 2):
             curr += nums[i]
         return curr
+
+ def canBeEqual(self, target, A):
+        return sorted(target) == sorted(A)
