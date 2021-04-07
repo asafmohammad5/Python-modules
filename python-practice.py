@@ -102,3 +102,15 @@ class Solution(object):
 
  def canBeEqual(self, target, A):
         return sorted(target) == sorted(A)
+
+    def luckyNumbers (self, matrix: List[List[int]]) -> List[int]:
+        n, m = len(matrix), len(matrix[0])
+        ans = []
+        col = [[matrix[i][j] for i in range(n)] for j in range(m)]
+        max_col = [max(col[i]) for i in range(m)]
+        for i in range(n):
+            minn = min(matrix[i])
+            for j in range(m):
+                if matrix[i][j] == minn and matrix[i][j] == max_col[j]:
+                    ans.append(matrix[i][j])
+        return ans
