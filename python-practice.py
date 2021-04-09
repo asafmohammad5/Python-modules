@@ -135,3 +135,14 @@ class Solution(object):
                 high = mid - 1
                 
         return peak
+
+     def maxProduct(self, nums):
+
+        first, second = 0, 0
+        for number in nums:
+            if number > first:
+                first, second = number, first       
+            else:
+                second = max( number, second)
+        
+        return (first - 1) * (second - 1)
