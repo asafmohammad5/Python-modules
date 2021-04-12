@@ -146,3 +146,6 @@ class Solution(object):
                 second = max( number, second)
         
         return (first - 1) * (second - 1)
+
+def maximum69Number(self, num):
+    return int(str(num).replace('6', '9', 1))
