@@ -166,3 +166,19 @@ def maximum69Number(self, num):
             i += 1
             j -= 1
         return a == b
+
+class Solution(object):
+    def removeOuterParentheses(self, S):  
+        count = 0 
+        output_S = []
+        for c in S:
+            if c == ')':
+                count -= 1
+            
+            if count > 0:
+                output_S.append(c)
+            
+            if c == '(':
+                count += 1
+        
+        return ''.join(output_S)
