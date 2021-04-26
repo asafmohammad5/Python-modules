@@ -209,3 +209,24 @@ class Solution(object):
             if is_self_dividing(x):
                 ans.append(x)
         return ans
+
+def freqAlphabets(self, s: str) -> str:
+	out = ""
+
+	for i in range(len(s)):
+		first, second, third = "","",""
+
+		if i < len(s):
+			first = s[i]
+		if i+1 < len(s):
+			second = s[i+1]
+		if i+2 < len(s):
+			third = s[i+2]
+
+		if second != "#" and first != "#":
+			if third == "#":
+				out += chr(int(first+second)+96)
+			else:
+				out += chr(int(first)+96)
+
+	return out 
