@@ -230,3 +230,8 @@ def freqAlphabets(self, s: str) -> str:
 				out += chr(int(first)+96)
 
 	return out 
+
+class Solution(object):
+   def sumZero(self, n):
+    a = range(1, n)
+    return a + [-sum(a)]
