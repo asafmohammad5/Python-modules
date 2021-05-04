@@ -235,3 +235,15 @@ class Solution(object):
    def sumZero(self, n):
     a = range(1, n)
     return a + [-sum(a)]
+
+class Solution:
+    def sumOfUnique(self, nums: List[int]) -> int:
+        seen = set()
+        duplicates = set()
+        
+        for num in nums:
+            if num in seen:
+                duplicates.add(num)
+            seen.add(num)
+        
+        return sum(seen.difference(duplicates))
