@@ -296,3 +296,6 @@ class SubrectangleQueries:
 
     def getValue(self, row: int, col: int) -> int:
         return self.rec[row][col]
+
+ def minPartitions(self, x):
+        return int(max(x))
